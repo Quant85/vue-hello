@@ -9,7 +9,28 @@ buon Vue a tutti/e */
 let app = new Vue ({
   el: '#app',
   data: {
-    message: 'Hello Vue!'
+    message: 'Hello Vue!',
+  }
+});
+
+let logo = new Vue({
+  el:'#logo',
+  data:{
+    logo: 'logo.png'
   }
 
+});
+let app2 = new Vue ({
+  el: '#app-2',
+  data: {
+    message: 'Hai caricato questa pagina alle ' + new Date().toLocaleString()
+  }
+
+});
+
+let demo = new Vue({
+  el: '#demo',
+  data: {
+    show: true
+  }
 });

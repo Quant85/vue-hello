@@ -3,11 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/style.css">
   <title>Hello Vue</title>
 </head>
 <body>
   <div id="app">
     <h1>{{message}}</h1>
+  </div>
+  <figure id="logo">
+    <img :src="'assets/img/' + logo" alt="">
+  </figure>
+  <div id="app-2">
+    <span v-bind:title="message">
+      Se si passa copra con il mouse l'etichetta mostrerà il testo associato dinamicamente con Vue
+    </span>
+  </div>
+  <div id="demo">
+    <button @click="show = !show">
+      Attiva effetto
+    </button>
+    <transition name="slide-fade">
+      <h2 v-if="show">Hello Vue</h2>
+    </transition>
   </div>
 
   
